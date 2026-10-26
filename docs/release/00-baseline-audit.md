@@ -6,7 +6,7 @@ Date: 2026-10-26. Everything below was checked in the repository or by running t
 
 | Item | Finding |
 |---|---|
-| Location | `D:\Flutter Source Code\deutschhelfer`, inside the parent Git repository `Flutter-Source-Code` (GitHub remote, branch `main`) |
+| Location | `D:\Projects\Deutschhelfer-APP`, inside the parent Git repository `Flutter-Source-Code` (GitHub remote, branch `main`) |
 | Tracking | **Untracked on purpose.** The project's own `.gitignore` ends with `.`; `git status -- .` shows `?? ./`. Nothing from this project has been committed (open question Q16). |
 | Other uncommitted work | The parent repository has many staged files under `../class_Task/`. They belong to another project and were not touched. |
 | Stack | Flutter 3.47.6 stable, Dart 3.13.5, Firebase Auth, Firestore, Cloud Functions 2nd gen (Node 22), App Check, FCM (`firebase_messaging` 17.0.0) |
