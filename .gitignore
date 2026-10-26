@@ -1,0 +1,87 @@
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
+
+# Widget Preview related
+.widget_preview/
+
+# Secrets and per-environment configuration. Never commit these.
+# The parent repository has a GitHub remote, so treat everything here as public.
+.env
+.env.*
+*.jks
+*.keystore
+key.properties
+service-account*.json
+*-service-account.json
+*-firebase-adminsdk-*.json
+*.p12
+*.pfx
+*.pem
+google-services.json
+GoogleService-Info.plist
+firebase-debug.log
+firestore-debug.log
+ui-debug.log
+pubsub-debug.log
+database-debug.log
+.firebase/
+
+# Node tooling for firebase/ (installed locally with npm install).
+node_modules/
+
+# Emulator-only settings and local environment configuration
+firebase/functions/.env.local
+!firebase/functions/.env.example
+
+# Real per-environment app config. config/emulator.json and
+# config/example.json are safe to commit.
+config/*.json
+!config/emulator.json
+!config/example.json
+
+
+# Ignore all Android generated build files
+/android/build/

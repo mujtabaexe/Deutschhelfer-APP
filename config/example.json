@@ -1,0 +1,11 @@
+{
+  "APP_ENV": "development",
+  "FIREBASE_PROJECT_ID": "your-project-id",
+  "FIREBASE_API_KEY": "from Firebase console > Project settings > Your apps",
+  "FIREBASE_APP_ID": "1:1234567890:android:abcdef",
+  "FIREBASE_MESSAGING_SENDER_ID": "1234567890",
+  "FIREBASE_EMULATOR_HOST": "",
+  "SUPPORT_EMAIL": "",
+  "PRIVACY_POLICY_URL": "",
+  "ACCOUNT_DELETION_URL": ""
+}

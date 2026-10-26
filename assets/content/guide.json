@@ -1,0 +1,392 @@
+{
+  "version": 1,
+  "reviewStatus": "DRAFT - checked against official sources on 2026-10-26 (see docs/release/12-content-review.md). The owner must confirm every high-impact claim (visa, money, APS, tuition) before release.",
+  "categories": [
+    {
+      "id": "start",
+      "title": "Getting started"
+    },
+    {
+      "id": "admission",
+      "title": "Admissions"
+    },
+    {
+      "id": "visa",
+      "title": "Visa and finances"
+    },
+    {
+      "id": "language",
+      "title": "IELTS and language"
+    },
+    {
+      "id": "stories",
+      "title": "Success stories"
+    }
+  ],
+  "articles": [
+    {
+      "id": "roadmap",
+      "categoryId": "start",
+      "title": "Your roadmap from Pakistan to a German university",
+      "summary": "The main stages, in order, so you know what comes next.",
+      "updated": "2026-10-26",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "Most students follow the same stages. The details differ by university and programme, so treat this as a map, not a rulebook."
+        },
+        {
+          "type": "heading",
+          "text": "The usual order"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Choose programmes that match your degree, grades and budget.",
+            "Check each programme's admission requirements and deadlines.",
+            "Prepare documents: transcripts, degree, CV, motivation letter, language certificate.",
+            "Get your school and degree documents attested (IBCC for SSC and HSSC, HEC for degrees) and check whether your programme asks for anything more.",
+            "Apply directly to the university or through uni-assist, as the programme says.",
+            "After admission, arrange proof of financial resources and health insurance.",
+            "Book and attend your student visa appointment.",
+            "Find accommodation and plan your arrival and city registration."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Start early"
+        },
+        {
+          "type": "paragraph",
+          "text": "Certificates, attestations and visa appointments can each take weeks or months. Many students start about a year before their intended semester."
+        }
+      ],
+      "sources": [
+        {
+          "label": "DAAD - Applying to a German university",
+          "url": "https://www.daad.de/en/study-and-research-in-germany/plan-your-studies/applying/"
+        },
+        {
+          "label": "German Missions in Pakistan - Study visa",
+          "url": "https://pakistan.diplo.de/pk-en/service/2-study-visa-seite-1676104"
+        },
+        {
+          "label": "DAAD Pakistan - Getting started",
+          "url": "https://www.daad.pk/en/study-research-in-germany/eight-steps-to-germany/getting-started/"
+        }
+      ]
+    },
+    {
+      "id": "choose-programme",
+      "categoryId": "admission",
+      "title": "Finding the right programme",
+      "summary": "Where to search, and what to compare before you apply.",
+      "updated": "2026-10-26",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "The DAAD International Programmes database lists many English-taught degrees. University websites remain the final word on requirements."
+        },
+        {
+          "type": "heading",
+          "text": "Compare these points"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Language of instruction and the language certificate required.",
+            "Whether your bachelor's subject and credit hours match what the programme expects.",
+            "Minimum grade requirements, which some universities state as a converted German grade.",
+            "Tuition and the semester contribution. Most public universities charge no tuition for most programmes. Baden-Württemberg charges non-EU students 1,500 EUR per semester, and universities in Bavaria may also charge non-EU students. The semester contribution is separate and is typically between 70 and 430 EUR per semester.",
+            "Application route: direct, uni-assist, or another portal.",
+            "Deadlines for winter and summer intake."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Check recognition"
+        },
+        {
+          "type": "paragraph",
+          "text": "The anabin database shows how German authorities classify foreign universities and degrees. Universities make the final decision for their own programmes."
+        }
+      ],
+      "sources": [
+        {
+          "label": "DAAD International Programmes",
+          "url": "https://www2.daad.de/deutschland/studienangebote/international-programmes/en/"
+        },
+        {
+          "label": "anabin database",
+          "url": "https://anabin.kmk.org/"
+        },
+        {
+          "label": "DAAD - Finances and tuition",
+          "url": "https://www.daad.de/en/studying-in-germany/living-in-germany/finances/"
+        }
+      ]
+    },
+    {
+      "id": "uni-assist",
+      "categoryId": "admission",
+      "title": "Applying through uni-assist",
+      "summary": "What uni-assist does, and how to avoid common delays.",
+      "updated": "2026-10-26",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "uni-assist pre-checks international applications for many German universities. Your programme's page says whether you must use it."
+        },
+        {
+          "type": "heading",
+          "text": "Avoid common delays"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Upload clear scans of every page, including the back of documents.",
+            "If your university requires certified copies, they must reach uni-assist by post. Scans of certified documents are not enough. Check the university's requirement on uni-assist's university list.",
+            "Pay the processing fee early. uni-assist processes an application only after it is paid and submitted.",
+            "Standard processing takes 4 to 6 weeks after your paid application arrives, so apply at least 8 weeks before the deadline."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": "uni-assist",
+          "url": "https://www.uni-assist.de/en/"
+        },
+        {
+          "label": "uni-assist - Pay and submit",
+          "url": "https://www.uni-assist.de/en/how-to-apply/apply-online/pay-submit/"
+        },
+        {
+          "label": "uni-assist - Pakistan",
+          "url": "https://www.uni-assist.de/en/tools/info-country-by-country/details-country/country/pk/"
+        }
+      ]
+    },
+    {
+      "id": "aps",
+      "categoryId": "admission",
+      "title": "Attesting your documents (and the APS question)",
+      "summary": "Which attestations Pakistani applicants usually need, and what APS is.",
+      "updated": "2026-10-26",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "German universities usually ask Pakistani applicants for attested documents: SSC and HSSC certificates attested by the IBCC, and degrees and transcripts attested by the HEC. O and A Level records are attested by the British Council."
+        },
+        {
+          "type": "heading",
+          "text": "What about the APS?"
+        },
+        {
+          "type": "paragraph",
+          "text": "The Academic Evaluation Centre (APS) is a joint office of a German embassy and DAAD that checks certificates. uni-assist lists it for applicants from China, Vietnam and India. The official pages we checked for Pakistan do not ask for an APS certificate. If someone tells you that you need one, ask your university or the DAAD Information Centre Islamabad to confirm in writing."
+        },
+        {
+          "type": "heading",
+          "text": "Practical tips"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Check your programme's admission page for the exact list of documents it asks for.",
+            "Get your IBCC and HEC attestations early.",
+            "Keep copies of everything you submit and every receipt."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": "DAAD Pakistan - Getting started",
+          "url": "https://www.daad.pk/en/study-research-in-germany/eight-steps-to-germany/getting-started/"
+        },
+        {
+          "label": "uni-assist - Pakistan",
+          "url": "https://www.uni-assist.de/en/tools/info-country-by-country/details-country/country/pk/"
+        },
+        {
+          "label": "uni-assist - What is the APS?",
+          "url": "https://www.uni-assist.de/en/tools/glossary-of-terms/description/term/akademische-pruefstelle-aps/"
+        }
+      ]
+    },
+    {
+      "id": "student-visa",
+      "categoryId": "visa",
+      "title": "Student visa: the essentials",
+      "summary": "The documents most applicants need, and how appointments work.",
+      "updated": "2026-10-26",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "To study in Germany for more than 90 days you need a national visa for study purposes. Apply at the German mission responsible for where you live: the Embassy in Islamabad covers Islamabad, Punjab, Khyber Pakhtunkhwa, Gilgit-Baltistan and AJK; the Consulate General in Karachi covers Sindh and Balochistan."
+        },
+        {
+          "type": "heading",
+          "text": "Documents usually requested"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Valid passport and completed application form.",
+            "Admission letter, or conditional admission where accepted.",
+            "Proof of financial resources, often a blocked account.",
+            "Health insurance cover.",
+            "Academic certificates and transcripts, and proof of tuition payment if your course charges tuition.",
+            "Proof of language ability for your programme."
+          ]
+        },
+        {
+          "type": "paragraph",
+          "text": "Always use the current checklist on the German Missions in Pakistan website. Do not rely on lists from social media or agents. Applications and appointment registration go through the Consular Services Portal that the mission names, and student appointments can be delayed by high demand."
+        },
+        {
+          "type": "heading",
+          "text": "Avoid scams"
+        },
+        {
+          "type": "paragraph",
+          "text": "Only book appointments through the channel the mission names. Nobody can sell you a guaranteed appointment or visa."
+        }
+      ],
+      "sources": [
+        {
+          "label": "German Missions in Pakistan - Study visa",
+          "url": "https://pakistan.diplo.de/pk-en/service/2-study-visa-seite-1676104"
+        },
+        {
+          "label": "DAAD - Visa",
+          "url": "https://www.daad.de/en/studying-in-germany/living-in-germany/visa/"
+        }
+      ]
+    },
+    {
+      "id": "blocked-account",
+      "categoryId": "visa",
+      "title": "Blocked account and living costs",
+      "summary": "How the blocked account works and how to plan your budget.",
+      "updated": "2026-10-26",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "A blocked account (Sperrkonto) is the most common way to prove you can pay your living costs. You deposit a year's required amount, and after arrival you can withdraw only a fixed amount each month."
+        },
+        {
+          "type": "paragraph",
+          "text": "The German government sets the required amount. When we checked in October 2026, the German missions in Pakistan stated 992 EUR per month, or 11,904 EUR per year, for applications from 1 January 2025. Always confirm the current figure on the embassy website before you transfer money."
+        },
+        {
+          "type": "paragraph",
+          "text": "Your signature on the account-opening documents must be attested at the Embassy in Islamabad, the Consulate General in Karachi or the Honorary Consul in Lahore. This is a separate appointment from the visa appointment and has a fee."
+        },
+        {
+          "type": "heading",
+          "text": "Budget beyond the minimum"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Rent varies widely between cities. Large cities are much more expensive.",
+            "Budget for health insurance, the semester contribution, and a deposit for your room.",
+            "Keep an emergency reserve for your first months."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": "German Missions in Pakistan - Financing your stay",
+          "url": "https://pakistan.diplo.de/pk-en/service/-/1995528"
+        },
+        {
+          "label": "DAAD - Finances",
+          "url": "https://www.daad.de/en/studying-in-germany/living-in-germany/finances/"
+        }
+      ]
+    },
+    {
+      "id": "ielts-basics",
+      "categoryId": "language",
+      "title": "IELTS: understanding what programmes ask for",
+      "summary": "How band requirements work and how to plan your test date.",
+      "updated": "2026-10-26",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "English-taught programmes list the tests they accept, often IELTS Academic. Requirements vary by programme: many ask for a level between B2 and C1, which often means an overall band between about 5.5 and 6.5 or higher, sometimes with a minimum in each section. Always check the exact wording for your programme."
+        },
+        {
+          "type": "heading",
+          "text": "Plan your test date"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Book a date that leaves time for one retake before your deadline.",
+            "IELTS recommends treating results as valid for two years from the test date. Check whether your programme accepts older results.",
+            "Make sure your name matches your passport exactly."
+          ]
+        },
+        {
+          "type": "heading",
+          "text": "Free practice tips"
+        },
+        {
+          "type": "bullets",
+          "items": [
+            "Practise under timed conditions using official sample tests.",
+            "In Writing Task 2, answer every part of the question and plan before you write.",
+            "In Speaking, extend your answers with reasons and examples.",
+            "In Reading, skim for structure first, then scan for keywords."
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "label": "IELTS - Scoring in detail",
+          "url": "https://ielts.org/take-a-test/your-results/ielts-scoring-in-detail"
+        },
+        {
+          "label": "British Council Pakistan - IELTS",
+          "url": "https://www.britishcouncil.pk/"
+        }
+      ]
+    },
+    {
+      "id": "ielts-writing-plan",
+      "categoryId": "language",
+      "title": "IELTS Writing Task 2: a band-7 planning method",
+      "summary": "A step-by-step method with worked examples and a marking checklist.",
+      "premium": true,
+      "updated": "2026-10-23"
+    },
+    {
+      "id": "ielts-speaking-bank",
+      "categoryId": "language",
+      "title": "IELTS Speaking: topic bank with model answers",
+      "summary": "Common Part 2 topics with structured model answers.",
+      "premium": true,
+      "updated": "2026-10-23"
+    },
+    {
+      "id": "story-template",
+      "categoryId": "stories",
+      "title": "Share your story",
+      "summary": "Success stories from students who made it will appear here.",
+      "updated": "2026-10-23",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "We publish stories only with the student's written permission. Stories are checked so they do not reveal private details such as passport numbers or addresses."
+        },
+        {
+          "type": "paragraph",
+          "text": "If you studied in Germany after preparing in Pakistan and want to help others, contact the Deutschhelfer team."
+        }
+      ],
+      "sources": []
+    }
+  ]
+}

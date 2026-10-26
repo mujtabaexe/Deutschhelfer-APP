@@ -1,0 +1,7 @@
+# Copy to android/key.properties (git-ignored) and fill in. Keep the keystore
+# OUTSIDE the repository, for example C:\secure\deutschhelfer-upload.jks, and
+# back it up. Never commit either file or share the passwords.
+storeFile=C:\secure\deutschhelfer-upload.jks
+storePassword=
+keyAlias=upload
+keyPassword=

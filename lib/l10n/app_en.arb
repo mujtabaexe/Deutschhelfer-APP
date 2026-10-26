@@ -1,0 +1,391 @@
+{
+  "@@locale": "en",
+
+  "appTitle": "Deutschhelfer",
+  "@appTitle": { "description": "App name. Not translated." },
+
+  "brandMarkLabel": "Deutschhelfer logo",
+
+  "welcomeHeadline": "Your path to studying in Germany",
+  "welcomeBody": "Step-by-step guidance on admissions, applications and visas, with a community of students on the same journey.",
+  "welcomeFeatureGuidanceTitle": "Admissions and visa guidance",
+  "welcomeFeatureGuidanceBody": "Clear steps from choosing a university to your visa appointment.",
+  "welcomeFeatureCommunityTitle": "Student community",
+  "welcomeFeatureCommunityBody": "Topic groups where students help each other, with moderators keeping them safe.",
+  "welcomeFeatureIeltsTitle": "IELTS preparation",
+  "welcomeFeatureIeltsBody": "Tips and practice material to help you reach your target band.",
+
+  "actionCreateAccount": "Create account",
+  "actionSignIn": "Sign in",
+  "actionSendResetLink": "Send reset link",
+  "actionTryAgain": "Try again",
+  "actionBackToSignIn": "Back to sign in",
+  "actionGoToStart": "Go to start",
+
+  "signInTitle": "Welcome back",
+  "signInSubtitle": "Sign in to continue your preparation.",
+  "forgotPasswordLink": "Forgot password?",
+  "noAccountPrompt": "New to Deutschhelfer?",
+
+  "createAccountTitle": "Create your account",
+  "createAccountSubtitle": "You will confirm your email before you can post in groups or send messages.",
+  "haveAccountPrompt": "Already have an account?",
+
+  "forgotPasswordTitle": "Reset your password",
+  "forgotPasswordBody": "Enter the email you signed up with. If it matches an account, we will send a link to reset your password.",
+  "resetEmailSentTitle": "Check your email",
+  "resetEmailSentBody": "If an account exists for {email}, a reset link is on its way. It can take a few minutes to arrive.",
+  "@resetEmailSentBody": {
+    "placeholders": { "email": { "type": "String", "example": "student@example.com" } }
+  },
+
+  "fieldDisplayName": "Display name",
+  "fieldDisplayNameHelper": "Other students see this name in groups and messages.",
+  "fieldEmail": "Email",
+  "fieldPassword": "Password",
+  "fieldNewPasswordHelper": "At least {min} characters, including a letter and a number.",
+  "@fieldNewPasswordHelper": {
+    "placeholders": { "min": { "type": "int", "example": "8" } }
+  },
+  "fieldConfirmPassword": "Confirm password",
+  "showPassword": "Show password",
+  "hidePassword": "Hide password",
+
+  "errorRequired": "This field is required.",
+  "errorEmailInvalid": "Enter a valid email address, like name@example.com.",
+  "errorEmailTooLong": "This email address is too long.",
+  "errorPasswordTooShort": "Use at least {min} characters.",
+  "@errorPasswordTooShort": {
+    "placeholders": { "min": { "type": "int", "example": "8" } }
+  },
+  "errorPasswordTooLong": "Use at most {max} characters.",
+  "@errorPasswordTooLong": {
+    "placeholders": { "max": { "type": "int", "example": "128" } }
+  },
+  "errorPasswordNeedsLetterAndDigit": "Include at least one letter and one number.",
+  "errorPasswordsDoNotMatch": "The passwords do not match.",
+  "errorDisplayNameTooShort": "Use at least {min} characters.",
+  "@errorDisplayNameTooShort": {
+    "placeholders": { "min": { "type": "int", "example": "2" } }
+  },
+  "errorDisplayNameTooLong": "Use at most {max} characters.",
+  "@errorDisplayNameTooLong": {
+    "placeholders": { "max": { "type": "int", "example": "40" } }
+  },
+  "errorDisplayNameInvalidCharacters": "Remove special characters such as < and >.",
+  "errorDisplayNameContainsLink": "Display names cannot contain links or web addresses.",
+  "errorGroupNameTooShort": "Use at least {min} characters.",
+  "@errorGroupNameTooShort": {
+    "placeholders": { "min": { "type": "int", "example": "3" } }
+  },
+  "errorGroupNameTooLong": "Use at most {max} characters.",
+  "@errorGroupNameTooLong": {
+    "placeholders": { "max": { "type": "int", "example": "60" } }
+  },
+  "errorGroupDescriptionTooLong": "Use at most {max} characters.",
+  "@errorGroupDescriptionTooLong": {
+    "placeholders": { "max": { "type": "int", "example": "500" } }
+  },
+  "errorTextInvalidCharacters": "Remove special characters such as < and >.",
+  "errorGroupNameContainsLink": "Group names cannot contain links or web addresses.",
+
+  "authNotConfigured": "Account services are not connected in this build yet, so you cannot sign in.",
+  "authInvalidCredentials": "That email and password do not match an account.",
+  "authEmailAlreadyInUse": "This email cannot be used to create an account. Try signing in or resetting your password.",
+  "authWeakPassword": "Choose a stronger password.",
+  "authUserDisabled": "This account is disabled. Contact support if you think this is a mistake.",
+  "authTooManyRequests": "Too many attempts. Wait a few minutes, then try again.",
+  "authNetwork": "You appear to be offline. Check your connection and try again.",
+  "authUnknown": "Something went wrong. Please try again.",
+  "authRequiresRecentLogin": "For your security, sign in again before doing this.",
+
+  "verifyEmailTitle": "Confirm your email",
+  "verifyEmailBody": "We sent a confirmation link to {email}. Open it on this phone or any device, then come back here.",
+  "@verifyEmailBody": {
+    "placeholders": { "email": { "type": "String", "example": "student@example.com" } }
+  },
+  "verifyEmailWhy": "Confirming your email helps keep groups free of spam. Until then you cannot post or send messages.",
+  "verifyEmailCheck": "I have confirmed my email",
+  "verifyEmailResend": "Send the link again",
+  "verifyEmailResendIn": "Send again in {seconds} s",
+  "@verifyEmailResendIn": {
+    "placeholders": { "seconds": { "type": "int", "example": "42" } }
+  },
+  "verifyEmailSent": "A new link is on its way. Check your spam folder too.",
+  "verifyEmailStillPending": "Your email is not confirmed yet. Open the link in the email, then try again.",
+  "actionSignOut": "Sign out",
+  "actionCancel": "Cancel",
+  "actionSave": "Save",
+
+  "restrictedSuspendedTitle": "Your account is suspended",
+  "restrictedSuspendedBody": "A moderator suspended this account after reports of a rule violation. You cannot post or send messages while it is suspended.",
+  "restrictedDeletedTitle": "This account was deleted",
+  "restrictedDeletedBody": "The account is scheduled for removal and can no longer be used.",
+  "restrictedContact": "If you think this is a mistake, contact the Deutschhelfer team from the email address on your account.",
+
+  "navGuide": "Guide",
+  "navGroups": "Groups",
+  "navMessages": "Messages",
+  "navProfile": "Profile",
+
+  "profileTitle": "Profile",
+  "profileEditName": "Edit display name",
+  "profileEmailLabel": "Email",
+  "profileEmailPrivate": "Only you can see your email.",
+  "profileRoleOwner": "Owner",
+  "profileRoleStudentAdmin": "Student admin",
+  "profilePremium": "Premium",
+  "profileNameSaved": "Display name updated.",
+  "profileSaveFailed": "Could not save. Check your connection and try again.",
+  "profileSignOutConfirmTitle": "Sign out?",
+  "profileSignOutConfirmBody": "You will need your email and password to sign in again.",
+  "profileSectionAccount": "Account",
+  "profileSectionCommunity": "Community",
+  "profileModeration": "Moderation",
+  "profileModerationHint": "Review pending links and reports",
+  "profileNotifications": "Message notifications",
+  "profileNotificationsHint": "Alerts show who wrote to you, never the message itself.",
+  "profileNotificationsDenied": "Notifications are blocked. Allow them for Deutschhelfer in Android settings.",
+  "profileNotificationsFailed": "Notification settings could not be changed. Try again.",
+  "profileDeleteAccount": "Delete account",
+  "profileDeleteTitle": "Delete your account?",
+  "profileDeleteBody": "You leave all groups right away, and your name is replaced with \"Deleted user\" everywhere. Remaining data is removed after 90 days. This cannot be undone.",
+  "profileDeleteConfirmLabel": "Type DELETE to confirm",
+  "profileDeleteFailed": "Could not delete your account. Check your connection and try again.",
+  "profileDeletePasswordLabel": "Your password",
+  "profileDeleteWrongPassword": "That password is not correct, so your account was not deleted.",
+  "groupMakeModerator": "Make moderator",
+  "groupRemoveModerator": "Remove moderator role",
+  "groupRoleUpdated": "Role updated. The change applies after they next sign in.",
+  "profileAbout": "About Deutschhelfer",
+  "profileAboutBody": "Deutschhelfer is a student-run guide. It is not affiliated with the German government, DAAD, any embassy or any university. Always confirm requirements on official websites.",
+
+  "guideTitle": "Guide",
+  "guideSearchLabel": "Search the guide",
+  "guideSearchClear": "Clear search",
+  "guideAllCategories": "All",
+  "guideNoResultsTitle": "No matching articles",
+  "guideNoResultsBody": "Try fewer or different words, or choose another category.",
+  "guidePremiumBadge": "Premium",
+  "guideUpdated": "Updated {date}",
+  "@guideUpdated": {
+    "placeholders": { "date": { "type": "DateTime", "format": "yMMMd" } }
+  },
+  "guideSources": "Official sources",
+  "guideOpenSource": "Open {label} in your browser",
+  "@guideOpenSource": {
+    "placeholders": { "label": { "type": "String", "example": "DAAD" } }
+  },
+  "guideOpenFailed": "Could not open the link.",
+  "guideDisclaimer": "This guide is general information, not legal or immigration advice. Requirements change, so always confirm them on the official websites above.",
+  "guideLoadFailed": "The guide could not be loaded.",
+  "guideArticleMissing": "This article is no longer available.",
+  "premiumLockedTitle": "Premium article",
+  "premiumLockedBody": "This article is part of Premium. Premium plans are not available yet. They will appear here when they launch.",
+  "premiumUnavailable": "Premium content could not be loaded. Check your connection and try again.",
+  "premiumNotFound": "This premium article has not been published yet.",
+
+  "groupsTitle": "Groups",
+  "groupsYours": "Your groups",
+  "groupsDiscover": "Discover groups",
+  "groupsEmptyTitle": "No groups yet",
+  "groupsEmptyBody": "Groups appear here when the Deutschhelfer team opens them.",
+  "groupsCreate": "New group",
+  "groupCreateTitle": "New group",
+  "groupCreateIntro": "Groups are open to every verified student. Members can join, chat and report problems. Moderators you appoint review links.",
+  "groupCreateName": "Group name",
+  "groupCreateDescription": "Description (optional)",
+  "groupCreateCategory": "Category",
+  "groupCreateSubmit": "Create group",
+  "groupCreateFailed": "The group could not be created. Check your connection and try again.",
+  "groupCreated": "Group created.",
+  "groupsMemberCount": "{count, plural, =1{1 member} other{{count} members}}",
+  "@groupsMemberCount": {
+    "placeholders": { "count": { "type": "int" } }
+  },
+  "groupsLoadFailed": "Groups could not be loaded.",
+  "groupJoin": "Join group",
+  "groupJoined": "You joined the group.",
+  "groupLeave": "Leave group",
+  "groupLeaveConfirmTitle": "Leave this group?",
+  "groupLeaveConfirmBody": "You will stop seeing its messages. You can join again later.",
+  "groupFull": "This group is full.",
+  "groupOpenChat": "Open chat",
+  "groupMembers": "Members",
+  "groupMembersPrivate": "Join the group to see who else is in it.",
+  "groupModeratorBadge": "Moderator",
+  "groupYouBadge": "You",
+  "groupInfo": "Group info",
+  "groupMissing": "This group is no longer available.",
+  "categoryAdmissions": "Admissions",
+  "categoryVisa": "Visa",
+  "categoryIelts": "IELTS",
+  "categoryLiving": "Living in Germany",
+  "categoryGeneral": "General",
+
+  "chatComposerHint": "Write a message",
+  "chatSend": "Send message",
+  "chatLinkNotice": "Messages with links are checked by a moderator before others see them.",
+  "chatPendingBadge": "Waiting for moderator approval",
+  "chatSending": "Sending…",
+  "chatEmptyTitle": "No messages yet",
+  "chatEmptyBody": "Say hello and introduce yourself.",
+  "chatStart": "This is the start of the conversation.",
+  "chatLoadFailed": "Messages could not be loaded.",
+  "chatSendFailed": "Could not send. Wait a moment and try again.",
+  "chatTooLong": "Messages can be up to {max} characters.",
+  "@chatTooLong": {
+    "placeholders": { "max": { "type": "int" } }
+  },
+  "chatMessageFrom": "{name}, {time}",
+  "@chatMessageFrom": {
+    "placeholders": { "name": { "type": "String" }, "time": { "type": "String" } }
+  },
+  "messageActionCopy": "Copy text",
+  "messageActionReport": "Report message",
+  "messageActionWithdraw": "Withdraw message",
+  "messageActionRemove": "Remove message",
+  "messageActionMessageSender": "Message {name}",
+  "@messageActionMessageSender": {
+    "placeholders": { "name": { "type": "String" } }
+  },
+  "messageCopied": "Copied.",
+  "messageWithdrawn": "Message withdrawn.",
+  "linkOpenButton": "Open link to {host}",
+  "@linkOpenButton": {
+    "placeholders": { "host": { "type": "String" } }
+  },
+  "linkOpenTitle": "Open this link?",
+  "linkOpenBody": "This link goes to {host}. Links are shared by students and may not be safe. Continue only if you trust the site.",
+  "@linkOpenBody": {
+    "placeholders": { "host": { "type": "String" } }
+  },
+  "linkOpenAction": "Open link",
+
+  "messagesTitle": "Messages",
+  "inboxEmptyTitle": "No conversations yet",
+  "inboxEmptyBody": "To message someone, open a group you share and tap their name in the member list.",
+  "inboxYou": "You: {text}",
+  "@inboxYou": {
+    "placeholders": { "text": { "type": "String" } }
+  },
+  "dmLinksPlain": "Links in private messages cannot be opened from the app. Be careful with links from people you do not know.",
+  "dmBlock": "Block",
+  "dmUnblock": "Unblock",
+  "dmBlockedNotice": "You blocked this person. Unblock them to send messages.",
+  "dmBlockConfirmTitle": "Block {name}?",
+  "@dmBlockConfirmTitle": {
+    "placeholders": { "name": { "type": "String" } }
+  },
+  "dmBlockConfirmBody": "They will not be able to message you, and you will no longer see their messages in groups. You can unblock them in Profile.",
+  "dmStartFailed": "You cannot message this person. One of you may have left the group or blocked messages.",
+  "dmReportUser": "Report user",
+  "unknownUser": "Former member",
+
+  "reportTitle": "Report",
+  "reportWhy": "Why are you reporting this?",
+  "reportReasonSpam": "Spam or advertising",
+  "reportReasonHarassment": "Harassment or bullying",
+  "reportReasonScam": "Scam or fraud",
+  "reportReasonInappropriate": "Inappropriate content",
+  "reportReasonOther": "Something else",
+  "reportDetails": "More details (optional)",
+  "reportSubmit": "Send report",
+  "reportSent": "Thanks. A moderator will review your report.",
+  "reportAlready": "You already reported this.",
+  "reportFailed": "Could not send the report. Try again.",
+
+  "moderationTitle": "Moderation",
+  "moderationPendingTab": "Pending links",
+  "moderationReportsTab": "Reports",
+  "moderationSuspendedTab": "Suspended",
+  "moderationSuspendedEmpty": "No accounts are suspended.",
+  "moderationSuspendedUnknownName": "Unknown user",
+  "moderationLift": "Lift suspension",
+  "moderationLiftTitle": "Lift this suspension?",
+  "moderationLiftBody": "{name} will be able to post and message again. This is recorded in the audit log.",
+  "@moderationLiftBody": {
+    "placeholders": { "name": { "type": "String", "example": "Ali" } }
+  },
+  "moderationLiftNotAllowed": "Only the owner can lift a suspension of a staff member.",
+  "moderationSuspendedReason": "Reason: {reason}",
+  "@moderationSuspendedReason": {
+    "placeholders": { "reason": { "type": "String", "example": "Spam" } }
+  },
+  "moderationPendingEmpty": "No links are waiting for review.",
+  "moderationReportsEmpty": "No open reports.",
+  "moderationApprove": "Approve",
+  "moderationRemove": "Remove",
+  "moderationDismiss": "Dismiss",
+  "moderationSuspend": "Suspend user",
+  "moderationSuspendTitle": "Suspend this user?",
+  "moderationSuspendBody": "They will be signed out of posting and messaging until a staff member lifts the suspension.",
+  "moderationReason": "Reason (kept in the audit log)",
+  "moderationDone": "Done.",
+  "moderationFailed": "The action failed. You may not have permission for this group.",
+  "moderationFrom": "From {name}",
+  "@moderationFrom": {
+    "placeholders": { "name": { "type": "String" } }
+  },
+  "moderationReportLine": "{reason} · {type}",
+  "@moderationReportLine": {
+    "placeholders": { "reason": { "type": "String" }, "type": { "type": "String" } }
+  },
+  "reportTypeGroupMessage": "Group message",
+  "reportTypeDirectMessage": "Private message",
+  "reportTypeUser": "User",
+
+  "communityNotAllowed": "You cannot do this right now.",
+  "communityOffline": "You appear to be offline. Try again when you are connected.",
+
+  "stateLoading": "Loading",
+  "stateErrorTitle": "Something went wrong",
+  "stateOffline": "You are offline. Some content may be out of date.",
+  "notFoundTitle": "Page not found",
+  "notFoundBody": "This page does not exist or has moved.",
+
+  "linkCommunityRules": "Community rules",
+  "linkPrivacy": "Privacy notice",
+  "legalLastUpdated": "Last updated {date}",
+  "@legalLastUpdated": {
+    "placeholders": { "date": { "type": "String" } }
+  },
+  "legalContactTitle": "Contact",
+  "legalContactEmail": "Email: {email}",
+  "@legalContactEmail": {
+    "placeholders": { "email": { "type": "String" } }
+  },
+  "legalDeletionPage": "Account deletion page: {url}",
+  "@legalDeletionPage": {
+    "placeholders": { "url": { "type": "String" } }
+  },
+  "legalPolicyPage": "Privacy policy online: {url}",
+  "@legalPolicyPage": {
+    "placeholders": { "url": { "type": "String" } }
+  },
+  "createAccountAcceptRules": "I have read and accept the community rules and the privacy notice.",
+  "errorAcceptRules": "Accept the community rules to create an account.",
+  "acceptRulesTitle": "Community rules",
+  "acceptRulesBody": "Before you join groups or send messages, read and accept the community rules. They keep the community safe and useful for everyone.",
+  "acceptRulesRead": "Read the community rules",
+  "acceptRulesAccept": "I accept the rules",
+  "acceptRulesNotNow": "Not now",
+  "acceptRulesFailed": "Could not save your answer. Check your connection and try again.",
+  "profileSectionLegal": "Rules and privacy",
+  "profileBlockedAccounts": "Blocked accounts",
+  "blockedTitle": "Blocked accounts",
+  "blockedHint": "Blocked people cannot message you, and their group messages are hidden from you.",
+  "blockedEmpty": "You have not blocked anyone.",
+  "blockedLoadFailed": "Could not load blocked accounts.",
+  "blockedUnblockDone": "Unblocked.",
+  "blockActionBlock": "Block {name}",
+  "@blockActionBlock": {
+    "placeholders": { "name": { "type": "String" } }
+  },
+  "blockActionUnblock": "Unblock {name}",
+  "@blockActionUnblock": {
+    "placeholders": { "name": { "type": "String" } }
+  },
+  "groupBlockConfirmBody": "They will not be able to message you, and you will no longer see their messages in groups. You can unblock them in Profile.",
+  "blockDone": "Blocked. You will no longer see their messages."
+}
