@@ -510,7 +510,6 @@ service cloud.firestore {
           && data.conversationId == null
           && data.excerpt == ''
           && exists(/databases/$(database)/documents/users/$(data.targetId))
-          && exists(/databases/$(database)/documents/users/$(data.targetId))
         );
     }
 

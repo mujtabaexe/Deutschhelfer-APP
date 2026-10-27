@@ -1023,3 +1023,25 @@ describe('community rules acceptance', () => {
     await assertSucceeds(setDoc(doc(mod(), 'conversations/bob_mod'), conversation));
   });
 });
+describe('user reports', () => {
+  const userReport = (targetId) =>
+    report({
+      targetType: 'user',
+      targetId,
+      targetUserId: targetId,
+      groupId: null,
+      conversationId: null,
+      excerpt: '',
+    });
+  it('allows a report against an existing profile', async () => {
+    await seed((db) =>
+      setDoc(doc(db, 'users/zed'), {
+        displayName: 'Zed', createdAt: serverTimestamp(), updatedAt: serverTimestamp(),
+      }),
+    );
+    await assertSucceeds(setDoc(doc(alice(), 'reports/alice_user_zed'), userReport('zed')));
+  });
+  it('rejects a report against a profile that does not exist', async () => {
+    await assertFails(setDoc(doc(alice(), 'reports/alice_user_ghost'), userReport('ghost')));
+  });
+});
