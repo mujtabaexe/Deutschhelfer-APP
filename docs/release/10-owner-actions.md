@@ -11,8 +11,8 @@ Steps marked **IRREVERSIBLE** cannot be undone, or can be undone only with great
 | Developer name | Sahibzada Ahmad Mujtaba | Final. Filled in the hosting pages. |
 | Support email | sahibzadaahmadmujtaba@gmail.com | Final. Filled in the hosting pages and `config/example.json`. |
 | Deletion request reply time | Within 7 days | Final. Stated on `delete-account.html`. |
-| Minimum age | 18 | **Assumption, please confirm.** Sign-up now requires an "I am 18 years old or older" tick. Stated in the in-app privacy notice and on `privacy.html`. |
-| Firestore location | `asia-south1` (Mumbai) | **Assumption, please confirm before step A4.** Stated on `privacy.html`; the functions code also uses it. |
+| Minimum age | 18 | **Confirmed by the owner 2026-10-27.** Self-declaration at sign-up, not verification. Privacy wording still awaits the owner's review. |
+| Firestore location | `asia-southeast1` (Singapore) | **Chosen by the owner 2026-10-27**, replacing the Mumbai assumption. Named on `privacy.html`; `functions/index.js` and `lib/app/app_services.dart` use it. Confirm it in the console picker at A4. |
 | Plan | Spark (free) for now | Final. Functions stay on the local emulators until you approve Blaze. |
 | Subscriptions | None, launch free (Q1) | Final default. |
 | Messages of deleted users | Stay visible (Q13) | Final default. |
@@ -65,11 +65,11 @@ Rollback: Project settings → **Delete project** (recoverable for about 30 days
 Rollback: delete the app in Project settings; delete `config\dev.json`.
 Later, after your first Play upload, also add the **Play App Signing** certificate fingerprints (Play Console → Test and release → App integrity), which App Check needs.
 
-### A4. Create Firestore in Mumbai — IRREVERSIBLE
+### A4. Create Firestore in Singapore — IRREVERSIBLE
 
 1. Build → **Firestore Database** → **Create database**.
 2. Database ID: `(default)`.
-3. Location: **`asia-south1` (Mumbai)**. **The location can never be changed.** The only way out is a new project. If you are not sure about Mumbai, stop here and change the decision first (see section 0).
+3. Location: **`asia-southeast1` (Singapore)**. **The location can never be changed.** The only way out is a new project. If you are not sure about Singapore, stop here and change the decision first (see section 0).
 4. Start in **production mode**. The next step replaces the rules.
 
 Rollback: none for the location. You can delete the database's data, or the whole project.

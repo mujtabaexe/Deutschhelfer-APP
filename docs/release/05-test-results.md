@@ -77,7 +77,9 @@ New or changed tests:
 | Lifting a suspension with the function unreachable keeps the suspension and shows "The action failed" | `owner_tools_test.dart` |
 | Appointing a moderator with the function unreachable leaves the role unchanged | `account_admin_test.dart` |
 
-Not run: Firestore rules tests, functions unit and integration tests, on-device E2E, a release build (their inputs did not change, or a build is not needed to check this run's changes). The bundle is **not uploaded to Play**; see K3 in [11-known-issues.md](11-known-issues.md).
+Later the same day the owner chose **`asia-southeast1` (Singapore)** instead of Mumbai. The functions region changed in `firebase/functions/index.js`, `lib/app/app_services.dart` and the integration test's client. Re-checked: `flutter analyze` **No issues**; `npm run check:hosting` **ready to deploy**; `cd firebase/functions; $env:FUNCTIONS_DISCOVERY_TIMEOUT=240; npm run test:integration` **25 passed, 0 failed, exit 0** (about 3.5 min, local emulators only). The Flutter suite was not re-run: no Dart test references the region. No cloud resource exists, so the region has not been exercised against a real project.
+
+Not run: Firestore rules tests, functions unit tests, on-device E2E, a release build (their inputs did not change, or a build is not needed to check this run's changes). The bundle is **not uploaded to Play**; see K3 in [11-known-issues.md](11-known-issues.md).
 
 ## History in this run (failures investigated, not hidden)
 

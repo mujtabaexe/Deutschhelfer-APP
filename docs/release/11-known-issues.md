@@ -6,7 +6,7 @@
 | K2 | In-app account deletion, roles, the audit log and push need Blaze | High for release | Q26 |
 | K3 | **Upload key exists; bundle not uploaded.** The owner's upload key was recreated and `android/key.properties` exists (git-ignored; its contents were never read or printed). `build/app/outputs/bundle/release/app-release.aab` (55.5 MB, written 2026-10-27 05:07) is signed by `CN=Sahibzada Ahmad Mujtaba`, SHA-1 `7B:CF:F2:BA:…:3C:47`, verified with `keytool -printcert -jarfile` on 2026-10-27. **It is not uploaded, and must not be yet:** (1) it predates the age-confirmation change made later the same day, so it must be rebuilt; (2) no production Firebase project, hosting URLs or `config/prod.json` exist, and a production build refuses to start without them; (3) uploading needs the owner's Play Console account. | High for release | [10-owner-actions.md](10-owner-actions.md), section (c) |
 | K4 | Guide content is DRAFT. APS and the blocked-account amount are high-impact. | Medium | [12-content-review.md](12-content-review.md) |
-| K5 | Privacy notice, community rules and hosted pages are drafts by the development assistant, not a lawyer. Developer name, support email, 7-day reply time, minimum age 18 and Mumbai are now filled in; the age and the region are **assumptions** awaiting the owner. The placeholder check passes. | Medium | Q25, Q28 |
+| K5 | Privacy notice, community rules and hosted pages are drafts by the development assistant, not a lawyer. Developer name, support email, 7-day reply time, minimum age 18 (confirmed by the owner) and Singapore (`asia-southeast1`, chosen by the owner) are filled in. The placeholder check passes. The placeholder check passes. | Medium | Q25, Q28 |
 | K6 | FCM tokens use the deprecated `firebase_messaging` 17 token API (Q22) | Low | Switch to installation IDs after a real-device push test |
 | K7 | Group blocking hides messages locally; it fails open if the block list cannot be read | Low | Accepted |
 | K8 | Link detection is pattern-based ("example dot com" passes) and flags harmless dotted words | Low | Accepted (Q21) |
@@ -17,8 +17,8 @@
 | K13 | Bumping the rules version needs the rules deploy and the app update together. The server accepts only the current version, so older apps cannot record acceptance until updated. | Low | Release process note |
 | K14 | TalkBack was not exercised by a human. Automated semantics, tap-target and contrast checks pass. | Medium | Owner action 17 |
 | K15 | Subscriptions have no client flow | N/A until Q1 | [07-billing-readiness.md](07-billing-readiness.md) |
-| K16 | **Minimum age 18 is an assumption.** Sign-up has a required "I am 18 years old or older" box; the in-app privacy notice and `privacy.html` say the same. It is a self-declaration, not age verification. The community rules text does not mention age: changing it would bump the rules version and need a coordinated rules deploy (K13). | Medium | Owner confirms Q25 |
-| K17 | **Firestore region `asia-south1` is provisional and irreversible once created.** The privacy policy names it. | Medium | Owner confirms before step A4 |
+| K16 | **Minimum age 18, confirmed by the owner 2026-10-27.** Sign-up has a required "I am 18 years old or older" box; the in-app privacy notice and `privacy.html` say the same. It is a self-declaration, not age verification. The community rules text does not mention age: changing it would bump the rules version and need a coordinated rules deploy (K13). | Medium | Accepted |
+| K17 | **Firestore region is `asia-southeast1` (Singapore): irreversible once created.** The privacy policy names it. The owner chose it over Mumbai; no database exists yet. Latency from Pakistan was not measured. | Low | Owner confirms in the console picker before step A4 |
 
 ## Spark (free plan) audit: what depends on Cloud Functions
 

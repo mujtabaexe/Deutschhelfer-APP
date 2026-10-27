@@ -50,7 +50,7 @@ class AppServices {
 }
 
 /// Must match the region in firebase/functions/index.js.
-const functionsRegion = 'asia-south1';
+const functionsRegion = 'asia-southeast1';
 
 /// Initializes Firebase when configured and builds the services.
 Future<AppServices> createServices(

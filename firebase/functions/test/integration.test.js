@@ -31,7 +31,7 @@ const clientAuth = getAuth(client);
 connectAuthEmulator(clientAuth, `http://${process.env.FIREBASE_AUTH_EMULATOR_HOST ?? '127.0.0.1:9099'}`, {
   disableWarnings: true,
 });
-const functions = getFunctions(client, 'asia-south1');
+const functions = getFunctions(client, 'asia-southeast1');
 connectFunctionsEmulator(functions, '127.0.0.1', 5001);
 
 const PASSWORD = 'test-password-123';

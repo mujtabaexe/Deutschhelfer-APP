@@ -23,7 +23,7 @@ The first three block their phases. The rest have a provisional default that the
 | Q15 | Final-year project or production launch? | Built to production standard | Planning |
 | Q16 | **Repository.** This folder is untracked inside a repository with a GitHub remote. | Nothing committed | Commits |
 | Q17 | Logo and app icon | Monogram placeholder and the default icon | Release |
-| Q18 | **Firestore location and functions region** | `asia-south1` (Mumbai) for functions. Choose the same for Firestore when creating the project; it cannot be changed later. | Project creation |
+| Q18 | **Firestore location and functions region** | **`asia-southeast1` (Singapore), chosen by the owner on 2026-10-27**, for functions and Firestore. It cannot be changed after the database exists. | Project creation |
 | Q19 | **Guide content accuracy.** The bundled articles were checked against official sources on 2026-10-26 and corrected (APS, blocked account, tuition, uni-assist, IELTS). High-impact claims still need a human to confirm them. | Marked DRAFT; see [release/12-content-review.md](release/12-content-review.md) | Release |
 | Q20 | Suspension power | Resolved in code: student-admins suspend students only. The owner suspends anyone except the owner. Everything is audited. | — |
 | Q21 | Link detection now flags any dotted word, such as "file.pdf" or "Mr.Khan", including in display names | Accept, with false positives going to moderation | — |

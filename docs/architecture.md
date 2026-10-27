@@ -13,7 +13,7 @@
 | Free content | Bundled JSON asset | No reads, works offline, nothing to scrape (Q3) |
 | Premium content | `premiumContent/{id}` behind the `premium` claim | Bodies never ship in the APK |
 | Environments | `--dart-define-from-file`, a `demo-` project for emulators | Real config never committed; production refuses emulators |
-| Functions region | `asia-south1` (provisional) | Nearest to Pakistan. Must match the Firestore location (Q18). |
+| Functions region | `asia-southeast1` (Singapore, chosen by the owner 2026-10-27) | Not the nearest region to Pakistan, but the owner's choice. Must match the Firestore location (Q18). |
 
 ## Layers
 

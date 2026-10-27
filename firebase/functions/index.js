@@ -52,7 +52,7 @@ const db = getFirestore();
 
 // Region is provisional (open question): keep it next to the Firestore
 // database location chosen by the owner.
-const REGION = 'asia-south1';
+const REGION = 'asia-southeast1';
 setGlobalOptions({ region: REGION, maxInstances: 10 });
 
 const ENFORCE_APP_CHECK = defineBoolean('ENFORCE_APP_CHECK', { default: true });

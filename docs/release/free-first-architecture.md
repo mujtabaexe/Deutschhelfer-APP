@@ -79,7 +79,7 @@ These are console settings, not code:
 
 ## Region (Q18)
 
-`asia-south1` (Mumbai) is the provisional choice, nearest to Pakistan. Two caveats:
+`asia-southeast1` (Singapore) was chosen by the owner on 2026-10-27. Two caveats:
 - The free Cloud Storage quota applies only in US regions, but this app uses no Cloud Storage.
 - Firestore's per-unit price varies by location; re-check it when you choose.
 
