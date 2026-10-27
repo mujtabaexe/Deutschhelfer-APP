@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "demo-deutschhelfer"
-  }
+    "default": "demo-deutschhelfer",
+    "dev": "deutschhelfer-pk"
+  },
+  "targets": {},
+  "etags": {}
 }
