@@ -57,5 +57,5 @@ For the owner to confirm in Play Console.
 ## Gaps the owner must close
 
 1. Fill in and publish the privacy policy (`firebase/hosting/privacy.html`). Use the same URL in Play Console and in `PRIVACY_POLICY_URL`.
-2. Decide the minimum age (`{{MINIMUM_AGE}}`) and the target audience. If under-18s are in scope, Play's Families or teen policies may apply; check before submitting.
+2. Confirm the minimum age (18, an assumption) and choose target audience 18+. If under-18s are in scope, Play's Families or teen policies may apply; check before submitting.
 3. Confirm with a legal adviser whether Pakistani law (for example the Prevention of Electronic Crimes Act) or the GDPR applies to you, and what it requires. **This has not been assessed.**

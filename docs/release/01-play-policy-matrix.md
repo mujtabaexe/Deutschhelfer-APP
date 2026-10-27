@@ -32,7 +32,7 @@ This is an engineering checklist. **It does not guarantee Play approval.**
 | P12 | Billing through Google Play; PBL 8+ | **N/A** until billing is built | [07-billing-readiness.md](07-billing-readiness.md) | Q1 |
 | P13 | Permissions declared and justified | **PASS** | INTERNET, ACCESS_NETWORK_STATE, WAKE_LOCK, POST_NOTIFICATIONS, C2DM RECEIVE, READ_GSERVICES (from Firebase), and a dynamic-receiver permission. No sensitive or restricted permissions. | — |
 | P14 | Content rating questionnaire | **BLOCKED** | Users can interact and exchange messages, and UGC is moderated | Answer in Play Console |
-| P15 | Target audience and children | **BLOCKED** | Not directed at children. Minimum age undecided (`{{MINIMUM_AGE}}`). | Decide; complete the questionnaire |
+| P15 | Target audience and children | **BLOCKED** | Not directed at children. Minimum age 18 (assumption, awaiting the owner); sign-up requires a confirmation. | Decide; complete the questionnaire |
 | P16 | App access for reviewers | **BLOCKED** | Login is required, so reviewers need a test account | Create a reviewer account in prod. Give the credentials only through Play Console's App access form. |
 | P17 | Deceptive behaviour and impersonation | **PASS** in content | "Not affiliated with the German government, DAAD, any embassy or any university" in Profile → About and on `index.html`. The guide links official sources. | Store listing must not use official logos |
 | P18 | Financial and immigration advice accuracy | **BLOCKED** | Guide stays DRAFT; [12-content-review.md](12-content-review.md) | Human review of the high-impact claims |

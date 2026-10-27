@@ -55,6 +55,30 @@ Required by the brief: each category, how it is tested, and the result.
 
 **Untested:** real email delivery (verification and reset), real App Check, Firebase Auth's server password policy (a console setting), behaviour on a physical device, TalkBack.
 
+## Run of 2026-10-27 (owner decisions, minimum age, Spark audit)
+
+Windows 11, Flutter 3.47.6. Only code touched by this run was re-tested. The Firebase emulator suites were **not** re-run: nothing under `firebase/` changed except static hosting pages.
+
+| Check | Command | Result |
+|---|---|---|
+| Static analysis | `flutter analyze` | **No issues** (62 s) |
+| Affected tests | `flutter test` on `auth_flow`, `session_flow`, `owner_tools`, `account_admin`, `community_safety`, `test/config` | **83 passed** (39 s) |
+| Full Flutter suite | `flutter test` | **202 passed, 0 failed** (31 s). Was 199; 3 new tests. |
+| Hosting placeholder check | `cd firebase; npm run check:hosting` | **"Public pages are ready to deploy."** (3 s). On a scratch copy with `{{FIREBASE_REGION}}` put back it exits 1 and names `privacy.html: {{FIREBASE_REGION}}`. |
+| Bundle signer | `keytool -printcert -jarfile build\app\outputs\bundle\release\app-release.aab` | **`CN=Sahibzada Ahmad Mujtaba`**, SHA-1 `7B:CF:F2:BA:65:F7:4E:16:BE:AE:1D:2A:E7:3B:A3:95:F9:E1:3C:47`, SHA-256 `32:1C:6C:EA:2D:9B:07:82:2E:34:26:07:78:D6:1B:2E:94:03:DA:78:EA:5C:3F:4B:8D:40:5C:A2:BB:51:17:03`, valid until 2054-03-14. Not the debug key. (7 s) |
+| Bundle size and time | `Get-Item` on the same file | **58,188,781 bytes (55.5 MB)**, written 2026-10-27 05:07. **Built before this run's code changes and not rebuilt.** |
+
+New or changed tests:
+
+| Test | File |
+|---|---|
+| Sign-up is refused without the age confirmation, even with the rules ticked, and creates no account | `auth_flow_test.dart` |
+| Helper ticks every required sign-up checkbox; the privacy notice date is checked separately from the rules date | `test/helpers/test_app.dart`, `auth_flow_test.dart` |
+| Lifting a suspension with the function unreachable keeps the suspension and shows "The action failed" | `owner_tools_test.dart` |
+| Appointing a moderator with the function unreachable leaves the role unchanged | `account_admin_test.dart` |
+
+Not run: Firestore rules tests, functions unit and integration tests, on-device E2E, a release build (their inputs did not change, or a build is not needed to check this run's changes). The bundle is **not uploaded to Play**; see K3 in [11-known-issues.md](11-known-issues.md).
+
 ## History in this run (failures investigated, not hidden)
 
 - **Flutter:** the first run after the rules checkbox failed 2 registration tests, as expected. They were updated to tick the box, and new tests check the refusal.

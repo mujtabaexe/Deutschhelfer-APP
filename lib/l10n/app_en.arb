@@ -365,6 +365,14 @@
   },
   "createAccountAcceptRules": "I have read and accept the community rules and the privacy notice.",
   "errorAcceptRules": "Accept the community rules to create an account.",
+  "createAccountConfirmAge": "I am {age} years old or older.",
+  "@createAccountConfirmAge": {
+    "placeholders": { "age": { "type": "int", "example": "18" } }
+  },
+  "errorConfirmAge": "You must be {age} or older to create an account.",
+  "@errorConfirmAge": {
+    "placeholders": { "age": { "type": "int", "example": "18" } }
+  },
   "acceptRulesTitle": "Community rules",
   "acceptRulesBody": "Before you join groups or send messages, read and accept the community rules. They keep the community safe and useful for everyone.",
   "acceptRulesRead": "Read the community rules",

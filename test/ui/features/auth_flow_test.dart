@@ -228,21 +228,45 @@ void main() {
       expect(repo.calls, isEmpty);
     });
 
+    testWidgets('cannot create an account without confirming the age', (
+      tester,
+    ) async {
+      final repo = FakeAuthRepository();
+      await pumpApp(tester, authRepository: repo);
+      await fillValidForm(tester);
+      // Tick the rules only; the age confirmation is the second checkbox.
+      final rules = find.byType(CheckboxListTile).first;
+      await tester.ensureVisible(rules);
+      await tester.tap(rules);
+      await tester.pump();
+      final submit = find.widgetWithText(FilledButton, 'Create account');
+      await tester.ensureVisible(submit);
+      await tester.tap(submit);
+      await tester.pumpAndSettle();
+
+      expect(find.text('I am 18 years old or older.'), findsOneWidget);
+      expect(
+        find.text('You must be 18 or older to create an account.'),
+        findsOneWidget,
+      );
+      expect(repo.calls, isEmpty);
+    });
+
     testWidgets('the rules and privacy notice open before sign-up', (
       tester,
     ) async {
       await pumpApp(tester);
       await fillValidForm(tester);
-      for (final (link, title) in [
-        ('Community rules', 'Community rules'),
-        ('Privacy notice', 'Privacy notice'),
+      for (final (link, title, updated) in [
+        ('Community rules', 'Community rules', '2026-10-26'),
+        ('Privacy notice', 'Privacy notice', '2026-10-27'),
       ]) {
         final button = find.widgetWithText(TextButton, link);
         await tester.ensureVisible(button);
         await tester.tap(button);
         await tester.pumpAndSettle();
         expect(find.widgetWithText(PageHeader, title), findsOneWidget);
-        expect(find.text('Last updated 2026-10-26'), findsOneWidget);
+        expect(find.text('Last updated $updated'), findsOneWidget);
         await tester.pageBack();
         await tester.pumpAndSettle();
       }

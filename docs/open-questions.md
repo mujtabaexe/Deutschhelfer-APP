@@ -30,9 +30,9 @@ The first three block their phases. The rest have a provisional default that the
 | Q22 | **Push identifiers.** firebase_messaging 17 deprecates FCM tokens in favour of Firebase Installation IDs. | Keep tokens until the installation-ID flow is checked on a real device, then switch both the client and `notify()` to `fids` | Before release |
 | Q23 | Which events notify? | New direct messages, and moderation decisions on your own message. Never group chatter, to keep alerts useful. Off until the user turns it on. | — |
 | Q24 | May a student-admin lift a suspension the owner placed on a student? | Yes, matching who they may suspend. Only the owner lifts staff suspensions. | — |
-| Q25 | **Minimum age and target audience** for Play and the privacy policy (`{{MINIMUM_AGE}}`) | Not decided. The app is not directed at children. | Play submission |
+| Q25 | **Minimum age and target audience** for Play and the privacy policy | **18, an assumption awaiting the owner.** Sign-up requires a confirmation; target audience 18+ on Play. | Play submission |
 | Q26 | **Blaze upgrade.** Functions (in-app deletion, roles, audit, push, billing) need it. | Not upgraded. Recommendation: Blaze with a budget alert; see [release/free-first-architecture.md](release/free-first-architecture.md). | Real-service testing |
-| Q27 | **Public identity:** developer name as on the Play listing, support email, deletion response time (placeholders in `firebase/hosting/*.html` and `SUPPORT_EMAIL`) | Not decided | Play submission |
+| Q27 | **Public identity:** developer name as on the Play listing, support email, deletion response time (placeholders in `firebase/hosting/*.html` and `SUPPORT_EMAIL`) | **Decided:** Sahibzada Ahmad Mujtaba, sahibzadaahmadmujtaba@gmail.com, reply within 7 days. Filled in. | Play submission |
 | Q28 | **Community rules and privacy text.** Drafted in `lib/domain/models/legal.dart` and `firebase/hosting/privacy.html` from the app's actual behaviour. Not legal advice. | Draft in use | Release |
 
 ## Owner actions

@@ -1618,6 +1618,18 @@ abstract class AppLocalizations {
   /// **'Accept the community rules to create an account.'**
   String get errorAcceptRules;
 
+  /// No description provided for @createAccountConfirmAge.
+  ///
+  /// In en, this message translates to:
+  /// **'I am {age} years old or older.'**
+  String createAccountConfirmAge(int age);
+
+  /// No description provided for @errorConfirmAge.
+  ///
+  /// In en, this message translates to:
+  /// **'You must be {age} or older to create an account.'**
+  String errorConfirmAge(int age);
+
   /// No description provided for @acceptRulesTitle.
   ///
   /// In en, this message translates to:

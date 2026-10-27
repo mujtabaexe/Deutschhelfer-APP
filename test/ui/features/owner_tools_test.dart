@@ -147,10 +147,13 @@ void main() {
     Future<FakeAccountRepository> open(
       WidgetTester tester, {
       bool refuse = false,
+      bool unreachable = false,
     }) async {
       final reports = FakeReportRepository();
       await reports.suspend(userId: 'bob', staffId: 'x', reason: 'Spam links');
-      final accounts = FakeAccountRepository()..refuse = refuse;
+      final accounts = FakeAccountRepository()
+        ..refuse = refuse
+        ..fail = unreachable;
       await pumpApp(
         tester,
         services: fakeServices(
@@ -201,6 +204,24 @@ void main() {
       );
       await tester.pumpAndSettle();
       expect(find.textContaining('Only the owner can lift'), findsOneWidget);
+      expect(find.text('bob'), findsOneWidget);
+    });
+
+    testWidgets('an unreachable function keeps the suspension and says so', (
+      tester,
+    ) async {
+      // No deployed functions (Spark plan): the callable cannot be reached.
+      await open(tester, unreachable: true);
+      await tester.tap(find.text('Lift suspension'));
+      await tester.pumpAndSettle();
+      await tester.tap(
+        find.descendant(
+          of: find.byType(AlertDialog),
+          matching: find.widgetWithText(FilledButton, 'Lift suspension'),
+        ),
+      );
+      await tester.pumpAndSettle();
+      expect(find.textContaining('The action failed'), findsOneWidget);
       expect(find.text('bob'), findsOneWidget);
     });
   });

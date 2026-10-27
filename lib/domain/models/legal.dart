@@ -10,6 +10,10 @@ library;
 /// that exact version, so deploy the rules and the app update together.
 const currentRulesVersion = 1;
 
+/// Minimum age to create an account. Sign-up asks the user to confirm it, and
+/// the privacy notice and `firebase/hosting/privacy.html` state it.
+const minimumAge = 18;
+
 class LegalSection {
   const LegalSection(this.heading, this.body);
 
@@ -95,7 +99,7 @@ const communityRules = LegalDocument(
 
 const privacyNotice = LegalDocument(
   title: 'Privacy notice',
-  lastUpdated: '2026-10-26',
+  lastUpdated: '2026-10-27',
   sections: [
     LegalSection(
       'What we collect',
@@ -158,6 +162,14 @@ const privacyNotice = LegalDocument(
           'Profile. You can also email us to ask for a copy of your data. If '
           'you no longer have the app, use the account deletion page or '
           'contact us.',
+    ),
+    LegalSection(
+      'Age',
+      'You must be $minimumAge or older to create an account, and sign-up '
+          'asks you to confirm this. Deutschhelfer is not directed at anyone '
+          'younger, and we do not knowingly keep data about them. If you '
+          'believe a person under $minimumAge has an account, contact us and '
+          'we will delete it.',
     ),
   ],
 );

@@ -897,6 +897,16 @@ class AppLocalizationsEn extends AppLocalizations {
       'Accept the community rules to create an account.';
 
   @override
+  String createAccountConfirmAge(int age) {
+    return 'I am $age years old or older.';
+  }
+
+  @override
+  String errorConfirmAge(int age) {
+    return 'You must be $age or older to create an account.';
+  }
+
+  @override
   String get acceptRulesTitle => 'Community rules';
 
   @override

@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import '../../../../app/routes.dart';
 import '../../../../data/repositories/auth_repository.dart';
 import '../../../../data/repositories/profile_repository.dart';
+import '../../../../domain/models/legal.dart';
 import '../../../../domain/validation/input_validators.dart';
 import '../../../core/l10n_extensions.dart';
 import '../../../core/theme/app_tokens.dart';
@@ -150,6 +151,7 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
                       ),
                       const SizedBox(height: AppSpacing.md),
                       _AcceptRulesField(enabled: !busy),
+                      _ConfirmAgeField(enabled: !busy),
                     ],
                   ),
                 ),
@@ -174,6 +176,23 @@ class _CreateAccountScreenState extends State<CreateAccountScreen> {
   }
 }
 
+/// Confirms [minimumAge] at sign-up. The form cannot submit until it is ticked.
+class _ConfirmAgeField extends StatelessWidget {
+  const _ConfirmAgeField({required this.enabled});
+
+  final bool enabled;
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = context.l10n;
+    return _RequiredCheckbox(
+      enabled: enabled,
+      label: l10n.createAccountConfirmAge(minimumAge),
+      error: l10n.errorConfirmAge(minimumAge),
+    );
+  }
+}
+
 /// Google Play requires users to accept the community rules before they can
 /// post. The form cannot submit until this is ticked.
 class _AcceptRulesField extends StatelessWidget {
@@ -184,10 +203,47 @@ class _AcceptRulesField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = context.l10n;
+    return _RequiredCheckbox(
+      enabled: enabled,
+      label: l10n.createAccountAcceptRules,
+      error: l10n.errorAcceptRules,
+      links: Wrap(
+        spacing: AppSpacing.xs,
+        children: [
+          TextButton(
+            onPressed: () => context.push(AppRoutes.communityRules),
+            child: Text(l10n.linkCommunityRules),
+          ),
+          TextButton(
+            onPressed: () => context.push(AppRoutes.privacy),
+            child: Text(l10n.linkPrivacy),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+/// A checkbox the form cannot be submitted without.
+class _RequiredCheckbox extends StatelessWidget {
+  const _RequiredCheckbox({
+    required this.enabled,
+    required this.label,
+    required this.error,
+    this.links,
+  });
+
+  final bool enabled;
+  final String label;
+  final String error;
+  final Widget? links;
+
+  @override
+  Widget build(BuildContext context) {
     final theme = Theme.of(context);
     return FormField<bool>(
       initialValue: false,
-      validator: (value) => value == true ? null : l10n.errorAcceptRules,
+      validator: (value) => value == true ? null : error,
       builder: (field) => Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -196,21 +252,9 @@ class _AcceptRulesField extends StatelessWidget {
             onChanged: enabled ? field.didChange : null,
             contentPadding: EdgeInsets.zero,
             controlAffinity: ListTileControlAffinity.leading,
-            title: Text(l10n.createAccountAcceptRules),
+            title: Text(label),
           ),
-          Wrap(
-            spacing: AppSpacing.xs,
-            children: [
-              TextButton(
-                onPressed: () => context.push(AppRoutes.communityRules),
-                child: Text(l10n.linkCommunityRules),
-              ),
-              TextButton(
-                onPressed: () => context.push(AppRoutes.privacy),
-                child: Text(l10n.linkPrivacy),
-              ),
-            ],
-          ),
+          ?links,
           if (field.errorText != null)
             Padding(
               padding: const EdgeInsets.only(top: AppSpacing.xxs),

@@ -25,7 +25,7 @@ For the owner. Code-level status is in [01-play-policy-matrix.md](01-play-policy
 - [ ] **App access:** "All or some functionality is restricted". Create a dedicated reviewer account in the prod project. It must be verified and have accepted the rules, so the reviewer can reach groups. Enter its credentials only in this form, never in the repository or by email.
 - [ ] **Ads:** "No, my app does not contain ads".
 - [ ] **Content rating:** complete the questionnaire. Disclose user interaction, user-generated content and messaging.
-- [ ] **Target audience and content:** choose age groups from your minimum-age decision. If you include under-18s, read the policy for that audience first.
+- [ ] **Target audience and content:** choose **18 and over** only (minimum age 18, pending your confirmation).
 - [ ] **Data safety:** use the draft answers in [03-privacy-data-inventory.md](03-privacy-data-inventory.md). Answer "Yes" to deletion and give the deletion URL.
 - [ ] **Government apps:** No. **Financial features:** none. **Health:** none.
 - [ ] **News app:** No.

@@ -267,12 +267,15 @@ AppServices fakeServices({
   pushRepository: push ?? FakePushRepository(),
 );
 
-/// Ticks the community rules checkbox on the create-account form.
+/// Ticks every required checkbox on the create-account form.
 Future<void> tickRulesCheckbox(WidgetTester tester) async {
-  final box = find.byType(CheckboxListTile);
-  await tester.ensureVisible(box);
-  await tester.tap(box);
-  await tester.pump();
+  // The rules and the age confirmation are both required at sign-up.
+  final boxes = find.byType(CheckboxListTile);
+  for (var i = 0; i < boxes.evaluate().length; i++) {
+    await tester.ensureVisible(boxes.at(i));
+    await tester.tap(boxes.at(i));
+    await tester.pump();
+  }
 }
 
 /// Pumps the full app at a given phone size and text scale.

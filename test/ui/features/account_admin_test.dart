@@ -103,13 +103,14 @@ void main() {
   group('owner tools', () {
     Future<(FakeGroupRepository, FakeAccountRepository)> open(
       WidgetTester tester,
-      UserRole role,
-    ) async {
+      UserRole role, {
+      bool unreachable = false,
+    }) async {
       final groups = FakeGroupRepository()
         ..addGroup('g1', 'Visa help')
         ..addMember('g1', 'student-1', 'Me')
         ..addMember('g1', 'bob', 'Bob');
-      final accounts = FakeAccountRepository();
+      final accounts = FakeAccountRepository()..fail = unreachable;
       await pumpApp(
         tester,
         services: fakeServices(
@@ -138,6 +139,22 @@ void main() {
       expect(accounts.calls, ['studentAdmin:bob:true']);
       expect(groups.calls, contains('role:bob:moderator'));
       expect(groups.members['g1']!['bob']!.role, MemberRole.moderator);
+    });
+
+    testWidgets('an unreachable function leaves the role unchanged', (
+      tester,
+    ) async {
+      // No deployed functions (Spark plan): the callable cannot be reached.
+      final (groups, accounts) = await open(
+        tester,
+        UserRole.owner,
+        unreachable: true,
+      );
+      await tester.tap(find.text('Make moderator'));
+      await tester.pumpAndSettle();
+      expect(find.textContaining('The action failed'), findsOneWidget);
+      expect(accounts.calls, isEmpty);
+      expect(groups.members['g1']!['bob']!.role, MemberRole.member);
     });
 
     testWidgets('students do not see owner tools', (tester) async {
